@@ -1,12 +1,71 @@
 !!!
+:ruby
+  def render(partial)
+    Haml::Engine.new(File.read(partial)).render
+  end
 %html{ lang: 'en' }
   %head
-    %meta{ charset: 'UTF-8' }
-    %meta{ content: 'width=device-width, initial-scale=1.0', name:'viewport' }
-    %meta{ name: 'theme-color', content: '#fff' }
-    %meta{ name: 'description', content: '' }
-    %title Gulp Front Project
-    %link{ rel: 'stylesheet', href: 'assets/css/main.css' }
+    = render('app/partials/_head.haml')
   %body
-    %script{ src: 'assets/js/jquery.min.js' }
+    %nav.navbar.navbar-expand-lg.navbar-light.sticky-custom
+      %a.navbar-brand{ href: '#' }
+        %img{ src: 'assets/img/keppler_logo.png', alt: 'Keppler' }
+      %button.navbar-toggler{ 'aria-controls' => 'sandbox-nav', 'aria-expanded' => 'false', 'aria-label' => 'Toggle navigation', 'data-target' => '#sandbox-nav', 'data-toggle' => 'collapse', type: 'button' }
+        %span.navbar-toggler-icon
+      .collapse.navbar-collapse{ id: 'sandbox-nav' }
+        .navbar-nav.ml-auto
+          %a.nav-item.nav-link.active{ href: '#' }
+            Inicio
+          %a.nav-item.nav-link{ href: '#' } Productos
+          %a.nav-item.nav-link{ href: '#' } Galería
+          %a.nav-item.nav-link{ href: '#' } Blog
+    %section{ id: 'home' }
+      .home-bg
+        .home-bg-mask
+          %h1
+            Crea tu
+            %span.element
+            %br
+            con Keppler
+          %button.btn.main-btn.btn-folly Probar ahora
+    %section.products{ id: 'products' }
+      .container
+        %h1.section-title Catálogo de Productos
+        .row
+          - 4.times do
+            .col-lg-4.col-md-6
+              .product-single{ style: 'background-image:url("assets/img/img_3.jpg")' }
+                .product-text
+                  %h4 Product Title
+    %section.blog{ id: 'blog' }
+      .container
+        %h1.section-title Blog
+        .row.multiple-items
+          - 6.times do
+            .col-lg-4
+              .post-wrapper
+                .post-content
+                  .post-img
+                    %img{ src: 'assets/img/img_3.jpg', alt: '' }
+                  .post-text
+                    %h4.post-title Titulo del Blog
+                    %p It does get a bit more tricky though. Both EMs and pixels have their downfalls with media queries.
+                .post-date
+                  %span.day 25
+                  %span.month Septiembre
+    %footer
+      .container
+        .row
+          .col-lg-3
+            LOGO HERE
+          .col-lg-3
+            CONTACT HERE
+          .col-lg-3
+            SITEMAP HERE
+
+    %script{ src: 'https://code.jquery.com/jquery-3.3.1.min.js' }
+    %script{ src: 'https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js' }
+    %script{ src: 'https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js' }
+    %script{ src: 'https://cdn.jsdelivr.net/npm/typed.js@2.0.9' }
+    %script{ src: 'http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js' }
     %script{ src: 'assets/js/main.js' }

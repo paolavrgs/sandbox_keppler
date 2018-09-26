@@ -6,3 +6,21 @@ $breakpoints: (
   'lg': "(min-width: 1200px) and (max-width: 1600px)",
   'xl': "(min-width: 1601px) and (max-width: 2048px)",
 ) !default;
+
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700,800');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800');
+$montserrat: 'Montserrat', sans-serif; // Titles
+$opensans: 'Open Sans', sans-serif; // Subtitles and text
+
+// Colors
+$white: #fff;
+$keppler: #f44336;
+$black: #000;
+$almost_white: #f0eff4;
+
+$oxford_blue: rgba(10, 35, 66, 1);
+$dazzled_blue: rgba(39, 70, 144, 1);
+$jungle_green: rgba(44, 165, 141, 1);
+$blue_yonder: rgba(87, 108, 168, 1);
+$folly: rgba(255, 0, 76, 1);
