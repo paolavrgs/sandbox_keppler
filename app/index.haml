@@ -3,22 +3,67 @@
   def render(partial)
     Haml::Engine.new(File.read(partial)).render
   end
+
+  class Service
+    attr_accessor :title, :icon
+    def initialize(title, icon)
+      @title = title
+      @icon = icon
+    end
+  end
+
+  services = [
+    {
+      title: 'Multiples Usuarios',
+      icon: 'assets/img/icons/user.svg'
+    },
+    {
+      title: 'Galería de fotos',
+      icon: 'assets/img/icons/image.svg'
+    },
+    {
+      title: 'Blog',
+      icon: 'assets/img/icons/file.svg'
+    }
+  ]
+
+  @services = services.map do |service|
+    Service.new(service[:title], service[:icon])
+  end
 %html{ lang: 'en' }
   %head
     = render('app/partials/_head.haml')
   %body
     %nav.navbar.navbar-expand-lg.navbar-light.sticky-custom
-      %a.navbar-brand{ href: '#' }
+      %a.navbar-brand.d-md-none{ href: '#' }
         %img{ src: 'assets/img/keppler_logo.png', alt: 'Keppler' }
       %button.navbar-toggler{ 'aria-controls' => 'sandbox-nav', 'aria-expanded' => 'false', 'aria-label' => 'Toggle navigation', 'data-target' => '#sandbox-nav', 'data-toggle' => 'collapse', type: 'button' }
         %span.navbar-toggler-icon
       .collapse.navbar-collapse{ id: 'sandbox-nav' }
-        .navbar-nav.ml-auto
-          %a.nav-item.nav-link.active{ href: '#' }
-            Inicio
-          %a.nav-item.nav-link{ href: '#' } Productos
-          %a.nav-item.nav-link{ href: '#' } Galería
-          %a.nav-item.nav-link{ href: '#' } Blog
+        %ul.navbar-nav.mr-auto
+          %a.navbar-brand{ href: '#' }
+            %img{ src: 'assets/img/keppler_logo.png', alt: 'Keppler' }
+        %ul.navbar-nav.mx-auto
+          %li
+            %a.nav-item.nav-link{ href: '#home' } Inicio
+          %li
+            %a.nav-item.nav-link{ href: '#services' } Servicios
+          %li
+            %a.nav-item.nav-link{ href: '#products' } Productos
+          %li
+            %a.nav-item.nav-link{ href: '#' } Galería
+          %li
+            %a.nav-item.nav-link{ href: '#blog' } Blog
+        %ul.navbar-nav.ml-auto
+          %li
+            %a.nav-item.nav-link{ href: '#' }
+              %i.fab.fa-facebook-f
+          %li
+            %a.nav-item.nav-link{ href: '#' }
+              %i.fab.fa-twitter
+          %li
+            %a.nav-item.nav-link{ href: '#' }
+              %i.fab.fa-instagram
     %section{ id: 'home' }
       .home-bg
         .home-bg-mask
@@ -27,8 +72,19 @@
             %span.element
             %br
             con Keppler
-          %button.btn.main-btn.btn-folly Probar ahora
-    %section.products{ id: 'products' }
+          %button.btn.main-btn Probar ahora
+    %section.services{ id: 'services' }
+      .container
+        %h1.section-title Servicios
+        .row
+          - @services.map do |service|
+            .col-lg-4
+              .service-card
+                .service-icon
+                  %img{ src: "#{service.icon}" }
+                %h2.service-title= service.title
+                %p.service-text Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+    -# %section.products{ id: 'products' }
       .container
         %h1.section-title Catálogo de Productos
         .row
@@ -37,9 +93,19 @@
               .product-single{ style: 'background-image:url("assets/img/img_3.jpg")' }
                 .product-text
                   %h4 Product Title
+    %section.products{ id: 'products' }
+      %h1.section-title Catálogo de Productos
+      - 2.times do |x|
+        .product-section{ class: "#{x.even? ? 'justify-content-end' : 'justify-content-start'}" }
+          .product-big-image{ class: "#{x.even? ? 'product-image-right' : 'product-image-left'}" }
+            .product-text{ class: "#{x.even? ? 'product-text-left' : 'product-text-right'}" }
+              %h2 Nombre del Producto
+              %p Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae porro quo officiis repudiandae nisi aliquam suscipit, praesentium hic quia molestiae numquam soluta. Ipsa velit minus iste blanditiis veritatis consectetur enim?
+              %button.btn.main-btn Probar ahora
     %section.blog{ id: 'blog' }
       .container
-        %h1.section-title Blog
+        .section-header
+          %h1.section-title Blog
         .row.multiple-items
           - 6.times do
             .col-lg-4
@@ -53,7 +119,7 @@
                 .post-date
                   %span.day 25
                   %span.month Septiembre
-    %footer
+    -# %footer
       .container
         .row
           .col-lg-3

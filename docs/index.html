@@ -9,29 +9,60 @@
   <title>Demo - Keppler Admin</title>
   <link href='https://use.fontawesome.com/releases/v5.3.1/css/all.css' rel='stylesheet'>
   <link href='https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css' rel='stylesheet'>
-  <link href='http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css' rel='stylesheet' type='text/css'>
-  <link href='http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css' rel='stylesheet' type='text/css'>
+  <link href='http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css' rel='stylesheet'>
+  <link href='http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css' rel='stylesheet'>
   <link href='assets/css/main.css' rel='stylesheet'>
 
 </head>
 
 <body>
   <nav class="navbar navbar-expand-lg navbar-light sticky-custom">
-    <a class="navbar-brand" href="#">
+    <a class="navbar-brand d-md-none" href="#">
       <img alt="Keppler" src="assets/img/keppler_logo.png">
     </a>
     <button aria-controls="sandbox-nav" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-target="#sandbox-nav" data-toggle="collapse" type="button">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="sandbox-nav">
-      <div class="navbar-nav ml-auto">
-        <a class="nav-item nav-link active" href="#">
-          Inicio
+      <ul class="navbar-nav mr-auto">
+        <a class="navbar-brand" href="#">
+          <img alt="Keppler" src="assets/img/keppler_logo.png">
         </a>
-        <a class="nav-item nav-link" href="#">Productos</a>
-        <a class="nav-item nav-link" href="#">Galería</a>
-        <a class="nav-item nav-link" href="#">Blog</a>
-      </div>
+      </ul>
+      <ul class="navbar-nav mx-auto">
+        <li>
+          <a class="nav-item nav-link" href="#home">Inicio</a>
+        </li>
+        <li>
+          <a class="nav-item nav-link" href="#services">Servicios</a>
+        </li>
+        <li>
+          <a class="nav-item nav-link" href="#products">Productos</a>
+        </li>
+        <li>
+          <a class="nav-item nav-link" href="#">Galería</a>
+        </li>
+        <li>
+          <a class="nav-item nav-link" href="#blog">Blog</a>
+        </li>
+      </ul>
+      <ul class="navbar-nav ml-auto">
+        <li>
+          <a class="nav-item nav-link" href="#">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+        </li>
+        <li>
+          <a class="nav-item nav-link" href="#">
+            <i class="fab fa-twitter"></i>
+          </a>
+        </li>
+        <li>
+          <a class="nav-item nav-link" href="#">
+            <i class="fab fa-instagram"></i>
+          </a>
+        </li>
+      </ul>
     </div>
   </nav>
   <section id="home">
@@ -43,48 +74,70 @@
           <br>
           con Keppler
         </h1>
-        <button class="btn main-btn btn-folly">Probar ahora</button>
+        <button class="btn main-btn">Probar ahora</button>
+      </div>
+    </div>
+  </section>
+  <section class="services" id="services">
+    <div class="container">
+      <h1 class="section-title">Servicios</h1>
+      <div class="row">
+        <div class="col-lg-4">
+          <div class="service-card">
+            <div class="service-icon">
+              <img src="assets/img/icons/user.svg">
+            </div>
+            <h2 class="service-title">Multiples Usuarios</h2>
+            <p class="service-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="service-card">
+            <div class="service-icon">
+              <img src="assets/img/icons/image.svg">
+            </div>
+            <h2 class="service-title">Galería de fotos</h2>
+            <p class="service-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="service-card">
+            <div class="service-icon">
+              <img src="assets/img/icons/file.svg">
+            </div>
+            <h2 class="service-title">Blog</h2>
+            <p class="service-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+          </div>
+        </div>
       </div>
     </div>
   </section>
   <section class="products" id="products">
-    <div class="container">
-      <h1 class="section-title">Catálogo de Productos</h1>
-      <div class="row">
-        <div class="col-lg-4 col-md-6">
-          <div class="product-single" style="background-image:url(&quot;assets/img/img_3.jpg&quot;)">
-            <div class="product-text">
-              <h4>Product Title</h4>
-            </div>
-          </div>
+    <h1 class="section-title">Catálogo de Productos</h1>
+    <div class="justify-content-end product-section">
+      <div class="product-big-image product-image-right">
+        <div class="product-text product-text-left">
+          <h2>Nombre del Producto</h2>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae porro quo officiis repudiandae nisi aliquam suscipit, praesentium hic quia molestiae numquam soluta. Ipsa velit minus iste blanditiis veritatis consectetur enim?</p>
+          <button class="btn main-btn">Probar ahora</button>
         </div>
-        <div class="col-lg-4 col-md-6">
-          <div class="product-single" style="background-image:url(&quot;assets/img/img_3.jpg&quot;)">
-            <div class="product-text">
-              <h4>Product Title</h4>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6">
-          <div class="product-single" style="background-image:url(&quot;assets/img/img_3.jpg&quot;)">
-            <div class="product-text">
-              <h4>Product Title</h4>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6">
-          <div class="product-single" style="background-image:url(&quot;assets/img/img_3.jpg&quot;)">
-            <div class="product-text">
-              <h4>Product Title</h4>
-            </div>
-          </div>
+      </div>
+    </div>
+    <div class="justify-content-start product-section">
+      <div class="product-big-image product-image-left">
+        <div class="product-text product-text-right">
+          <h2>Nombre del Producto</h2>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae porro quo officiis repudiandae nisi aliquam suscipit, praesentium hic quia molestiae numquam soluta. Ipsa velit minus iste blanditiis veritatis consectetur enim?</p>
+          <button class="btn main-btn">Probar ahora</button>
         </div>
       </div>
     </div>
   </section>
   <section class="blog" id="blog">
     <div class="container">
-      <h1 class="section-title">Blog</h1>
+      <div class="section-header">
+        <h1 class="section-title">Blog</h1>
+      </div>
       <div class="row multiple-items">
         <div class="col-lg-4">
           <div class="post-wrapper">
@@ -191,26 +244,11 @@
       </div>
     </div>
   </section>
-  <footer>
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-3">
-          LOGO HERE
-        </div>
-        <div class="col-lg-3">
-          CONTACT HERE
-        </div>
-        <div class="col-lg-3">
-          SITEMAP HERE
-        </div>
-      </div>
-    </div>
-  </footer>
   <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.9"></script>
-  <script src="http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js" type="text/javascript"></script>
+  <script src="http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
   <script src="assets/js/main.js"></script>
 </body>
 

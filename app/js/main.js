@@ -34,3 +34,21 @@ function createSticky(sticky) {
     });         
   }
 }
+
+// Active links underline
+$(document).on('scroll', function () {
+  var array = [];
+  $('section').each(function () {
+    array.push(this.id);
+  });
+  $(window).scroll(function () {
+    $.each(array, function (x, v) {
+      if ($(window).scrollTop() >= ($("#" + v).position().top - 100) && $(window).scrollTop() <= ($("#" + v).position().top - 100) + $("#" + v).outerHeight(true)) {
+        $('.nav-link[href=\"#' + v + '\"]').addClass('active');
+      }
+      else {
+        $('.nav-link[href=\"#' + v + '\"]').removeClass('active');
+      }
+    })
+  })
+});

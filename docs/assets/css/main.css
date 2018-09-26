@@ -39,12 +39,17 @@
   padding: 8px 50px;
 }
 
+.navbar-brand {
+  margin-right: 0;
+}
+
 .navbar-brand img {
   width: 100px;
 }
 
 .nav-link {
   font-weight: 700;
+  font-size: 13px;
   font-family: "Open Sans", sans-serif;
   text-transform: uppercase;
 }
@@ -75,72 +80,53 @@
   font-size: 60px;
 }
 
-.products {
+.services {
   padding: 50px 0;
   position: relative;
 }
 
-.products::before {
-  background-image: url("../img/wave_2.png");
+.services::before {
+  background-image: url("../img/wave_double.png");
   background-size: cover;
   content: '';
-  height: 100px;
   position: absolute;
-  top: -99px;
+  height: 400px;
+  top: -399px;
   width: 100%;
 }
 
-.product-single {
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  height: 300px;
-  margin-bottom: 25px;
-  position: relative;
-  transition: all 300ms ease 0s;
+.service-card {
   border-radius: 10px;
+  padding: 40px 20px;
+  box-shadow: 0px 5px 25px -5px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.product-single::before {
-  content: "";
-  position: absolute;
-  border-radius: 10px;
-  left: 0px;
-  top: 0px;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.5) 100%);
-  transition: all 300ms ease 0s;
+.service-icon {
+  margin: 20px 0;
 }
 
-.product-single:hover::before {
-  background: rgba(255, 255, 255, 0.9);
+.service-icon img {
+  width: 80px;
 }
 
-.product-text {
-  position: absolute;
-  font-family: "Montserrat", sans-serif;
-  left: 0px;
-  padding: 20px;
-  bottom: 30px;
-}
-
-.product-single:hover .product-text h4, i {
-  background: #000;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  -webkit-background-clip: text;
-}
-
-.product-single .product-text h4 {
+.service-title {
   font-size: 25px;
-  font-weight: 700;
-  color: #fff;
-  background-clip: text;
-  -webkit-background-clip: text;
-  text-transform: uppercase;
-  cursor: pointer;
-  transition: all 300ms linear 0s;
+  font-weight: 600;
+  font-family: "Montserrat", sans-serif;
+}
+
+.service-text {
+  text-align: center;
+  font-size: 15px;
+  font-family: "Open Sans", sans-serif;
+}
+
+.products {
+  padding: 50px 0;
+  position: relative;
 }
 
 .blog {
@@ -158,6 +144,7 @@
 .post-content {
   height: 400px;
   border-radius: 10px;
+  background-color: #fff;
   position: relative;
 }
 
@@ -251,16 +238,62 @@ footer {
   background-color: gray;
   height: 600px;
   position: relative;
-  padding-top: 150px;
+  padding: 50px 0;
   width: 100%;
 }
 
-footer::before {
-  background-image: url("../img/wave.svg");
+.product-section {
+  display: flex;
+  margin-bottom: 70px;
+}
+
+.product-section:last-child {
+  margin-bottom: 10px;
+}
+
+.product-big-image {
+  background-image: url("../img/slider1-1.jpg");
   background-size: cover;
-  content: '';
-  height: 100px;
+  height: 70vh;
+  width: 65%;
+  position: relative;
+}
+
+.product-text {
+  background-color: #fff;
   position: absolute;
-  top: -3px;
-  width: 100%;
+  border-radius: 10px;
+  top: 50%;
+  padding: 40px;
+  transform: translateY(-50%);
+  width: 40%;
+  height: 350px;
+  box-shadow: 0px 9px 32px -1px rgba(0, 0, 0, 0.2);
+}
+
+.product-text h2 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.product-text p {
+  font-family: "Open Sans", sans-serif;
+  font-size: 15px;
+}
+
+.product-image-right {
+  border-radius: 10px 0 0 10px;
+}
+
+.product-image-left {
+  border-radius: 0 10px 10px 0;
+}
+
+.product-text-right {
+  right: -30%;
+}
+
+.product-text-left {
+  left: -30%;
 }
