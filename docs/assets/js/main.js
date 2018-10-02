@@ -52,3 +52,7 @@ $(document).on('scroll', function () {
     })
   })
 });
+
+$('#modalGallery').on('shown.bs.modal', function () {
+  $('.single-item').slick();
+})

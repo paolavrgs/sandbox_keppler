@@ -8,6 +8,15 @@
   }
 }
 
+a {
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: none;
+    color: inherit;
+  }
+}
+
 .main-btn {
   border-radius: 15px;
   padding: 8px 24px;
@@ -133,63 +142,6 @@
   position: relative;
 }
 
-// .product-single {
-//   background-size: cover;
-//   background-repeat: no-repeat;
-//   background-position: center;
-//   height: 300px;
-//   margin-bottom: 25px;
-//   position: relative;
-//   transition: all 300ms ease 0s;
-//   border-radius: 10px;
-
-//   &::before{
-//     content: "";
-//     position: absolute;
-//     border-radius: 10px;
-//     left: 0px;
-//     top: 0px;
-//     width: 100%;
-//     height: 100%;
-//     // opacity: 0;
-//     background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, .5) 100%);
-//     transition: all 300ms ease 0s;
-//   }
-  
-//   &:hover::before {
-//     background: rgba(255, 255, 255, 0.9);
-//     // opacity: 1;
-//   }
-// }
-
-// .product-text {
-//   position: absolute;
-//   font-family: $montserrat;
-//   left: 0px;
-//   padding: 20px;
-//   bottom: 30px;
-// }
-
-// .product-single:hover .product-text h4, i {
-//   // background: linear-gradient(90deg, rgba(0,208,191,1) 0%, rgba(244,67,54,1) 100%);
-//   background: #000;
-//   background-clip: text;
-//   -webkit-text-fill-color: transparent;
-//   -webkit-background-clip: text;
-// }
-
-
-// .product-single .product-text h4 {
-//   font-size: 25px;
-//   font-weight: 700;
-//   color: $white;
-//   background-clip: text;
-//   -webkit-background-clip: text;
-//   text-transform: uppercase;
-//   cursor: pointer;
-//   transition: all 300ms linear 0s;
-// }
-
 .blog {
   padding: 50px 0;
 }
@@ -296,11 +248,38 @@
 }
 
 footer {
-  background-color: gray;
-  height: 600px;
+  background-color: #e2e2e2;
+  color: $keppler;
+  font-family: $opensans;
+  height: 350px;
   position: relative;
   padding: 50px 0;
   width: 100%;
+
+  li {
+    list-style: none;
+    margin: 10px 0;
+    font-weight: 600;
+
+    &:first-child {
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+  }
+
+  a {
+    color: $keppler;
+  }
+}
+
+.footer-logo {
+  align-items: center;
+  display: flex;
+  height: 180px;
+
+  img {
+    width: 60%;
+  }  
 }
 
 .product-section {
@@ -356,4 +335,27 @@ footer {
 
 .product-text-left {
   left: -30%;
+}
+
+.banner {
+  background-color: #404b4f;
+  height: 300px;
+  padding: 60px 0;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.gallery {
+  padding: 50px 0;
+}
+
+.masonry {
+  column-count:4;
+  column-gap: 10px;
+  
+  img {
+    margin-bottom: 10px;
+  }
 }
