@@ -12,7 +12,16 @@ $('.multiple-items').slick({
   slidesToShow: 3,
   slidesToScroll: 3,
   centerMode: true,
-  centerPadding: 0
+  centerPadding: 0,
+  responsive: [
+    {
+      breakpoint: 480,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1
+      }
+    }
+  ]
 });
 
 jQuery(function(){

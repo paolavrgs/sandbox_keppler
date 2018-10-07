@@ -102,7 +102,7 @@ a:hover {
 .services::before {
   background-image: url("../img/wave_double.svg");
   background-size: cover;
-  content: '';
+  content: "";
   position: absolute;
   height: 400px;
   top: -399px;
@@ -167,11 +167,11 @@ a:hover {
 }
 
 .post-content::after {
-  content: '';
+  content: "";
+  position: absolute;
   width: 3px;
   height: 30px;
   margin: 0 auto;
-  position: absolute;
   left: 50%;
   background-color: black;
   bottom: -15px;
@@ -359,7 +359,7 @@ footer a {
 }
 
 .banner::before {
-  content: '';
+  content: "";
   position: absolute;
   height: 100%;
   width: 100%;
@@ -385,6 +385,18 @@ footer a {
 .masonry {
   column-count: 4;
   column-gap: 10px;
+}
+
+@media (min-width: 0px) and (max-width: 767px) {
+  .masonry {
+    column-count: 2;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .masonry {
+    column-count: 3;
+  }
 }
 
 .masonry img {

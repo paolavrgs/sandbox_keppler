@@ -86,7 +86,7 @@
                 %p.service-text Lorem ipsum dolor sit amet, consectetur adipisicing elit.
     %section.products{ id: 'products' }
       %h1.section-title Catálogo de Productos
-      - 2.times do |x|
+      - 1.times do |x|
         .product-section{ class: "#{x.even? ? 'justify-content-end' : 'justify-content-start'}" }
           .product-big-image{ class: "#{x.even? ? 'product-image-right' : 'product-image-left'}" }
             .product-text{ class: "#{x.even? ? 'product-text-left' : 'product-text-right'}" }
@@ -130,7 +130,7 @@
           %h1.section-title Blog
         .row.multiple-items
           - 6.times do
-            .col-lg-4
+            .col-lg-4.col-xs-12
               .post-wrapper
                 .post-content
                   .post-img

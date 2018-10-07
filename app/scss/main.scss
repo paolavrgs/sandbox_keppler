@@ -103,8 +103,7 @@ a {
     background-image: url('../img/wave_double.svg');
     // background-image: url('../img/wave_2.png');
     background-size: cover;
-    content: '';
-    position: absolute;
+    @include pseudo();
     // height: 100px;
     // top: -99px;
     height: 400px;
@@ -170,11 +169,10 @@ a {
   position: relative;
 
   &::after {
-    content: '';
+    @include pseudo();
     width: 3px;
     height: 30px;
     margin: 0 auto;
-    position: absolute;
     left: 50%;
     background-color: black;
     bottom: -15px;
@@ -361,8 +359,7 @@ footer {
   position: relative;
 
   &::before {
-    content: '';
-    position: absolute;
+    @include pseudo();
     @include size(100%,100%);
     background-color: rgba( $black, .5 );
   }
@@ -385,9 +382,17 @@ footer {
 }
 
 .masonry {
-  column-count:4;
+  column-count: 4;
   column-gap: 10px;
   
+  @include responsive(xs) {
+    column-count: 2;
+  }
+
+  @include responsive(sm) {
+    column-count: 3;
+  }
+
   img {
     margin-bottom: 10px;
   }
