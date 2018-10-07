@@ -287,62 +287,6 @@ footer a {
   width: 60%;
 }
 
-.product-section {
-  display: flex;
-  margin-bottom: 70px;
-}
-
-.product-section:last-child {
-  margin-bottom: 10px;
-}
-
-.product-big-image {
-  background-image: url("../img/slider1-1.jpg");
-  background-size: cover;
-  height: 70vh;
-  width: 65%;
-  position: relative;
-}
-
-.product-text {
-  background-color: #fff;
-  position: absolute;
-  border-radius: 10px;
-  top: 50%;
-  padding: 40px;
-  transform: translateY(-50%);
-  width: 40%;
-  height: 350px;
-  box-shadow: 0px 9px 32px -1px rgba(0, 0, 0, 0.2);
-}
-
-.product-text h2 {
-  font-family: "Montserrat", sans-serif;
-  font-size: 28px;
-  font-weight: 700;
-}
-
-.product-text p {
-  font-family: "Open Sans", sans-serif;
-  font-size: 15px;
-}
-
-.product-image-right {
-  border-radius: 10px 0 0 10px;
-}
-
-.product-image-left {
-  border-radius: 0 10px 10px 0;
-}
-
-.product-text-right {
-  right: -30%;
-}
-
-.product-text-left {
-  left: -30%;
-}
-
 .banner {
   background-image: url("https://images.unsplash.com/photo-1501959181532-7d2a3c064642?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=9ffb47d2c8a236bae5e5bb86b2c400b9&auto=format&fit=crop&w=1070&q=80");
   background-repeat: no-repeat;
@@ -400,6 +344,7 @@ footer a {
 }
 
 .masonry img {
+  border-radius: 10px;
   margin-bottom: 10px;
 }
 
@@ -434,4 +379,126 @@ footer a {
 
 .two-btn-cta button {
   margin: 0 20px;
+}
+
+.product-image {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  margin-bottom: 30px;
+  height: 630px;
+}
+
+.left-side .product-image, .right-side .product-image {
+  height: 300px;
+}
+
+.product-section {
+  display: flex;
+  margin-bottom: 70px;
+}
+
+.product-section:last-child {
+  margin-bottom: 10px;
+}
+
+.product-big-image {
+  background-image: url("../img/slider1-1.jpg");
+  background-size: cover;
+  height: 70vh;
+  width: 65%;
+  position: relative;
+}
+
+.product-text {
+  background-color: #fff;
+  position: absolute;
+  border-radius: 10px;
+  top: 50%;
+  padding: 40px;
+  transform: translateY(-50%);
+  width: 40%;
+  height: 350px;
+  box-shadow: 0px 9px 32px -1px rgba(0, 0, 0, 0.2);
+}
+
+.product-text h2 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.product-text p {
+  font-family: "Open Sans", sans-serif;
+  font-size: 15px;
+}
+
+.product-image-right {
+  border-radius: 10px 0 0 10px;
+}
+
+.product-image-left {
+  border-radius: 0 10px 10px 0;
+}
+
+.product-text-right {
+  right: -30%;
+}
+
+.product-text-left {
+  left: -30%;
+}
+
+.page-tabs-nav li {
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.products-card {
+  display: inline-block;
+  height: 375px;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  -webkit-background-size: cover;
+  background-size: cover;
+  position: relative;
+  border-radius: 10px;
+}
+
+.small-title {
+  line-height: 35px;
+  margin-bottom: 0;
+  position: absolute;
+  top: 60px;
+  bottom: 60px;
+  left: 0;
+  right: 0;
+  background-color: rgba(252, 252, 252, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  transition: opacity 0.5s;
+}
+
+.tab-pane {
+  padding: 0 15px;
+}
+
+.tab-pane h1 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 25px;
+  font-weight: 600;
+}
+
+.tab-pane p {
+  font-family: "Open Sans", sans-serif;
+  font-size: 15px;
+  max-height: 100px;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }

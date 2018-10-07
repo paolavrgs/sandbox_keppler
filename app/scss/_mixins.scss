@@ -22,9 +22,11 @@
   position: $pos;
 }
 
-@mixin truncate($truncation) {
-  max-width: $truncation;
-  white-space: nowrap;
+@mixin truncate($height, $lines) {
+  max-height: $height;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: $lines; 
   overflow: hidden;
   text-overflow: ellipsis;
 }

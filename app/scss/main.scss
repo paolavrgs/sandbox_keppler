@@ -289,6 +289,109 @@ footer {
   }  
 }
 
+.banner {
+  background-image: url('https://images.unsplash.com/photo-1501959181532-7d2a3c064642?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=9ffb47d2c8a236bae5e5bb86b2c400b9&auto=format&fit=crop&w=1070&q=80');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  height: 350px;
+  padding: 60px 0;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+
+  &::before {
+    @include pseudo();
+    @include size(100%,100%);
+    background-color: rgba( $black, .5 );
+  }
+
+  .banner-content {
+    text-align: center;
+    z-index: 1;
+
+    p {
+      color: $white;
+      font-family: $montserrat;
+      font-size: 25px;
+      font-weight: 600;
+    }
+  }
+}
+
+.gallery {
+  padding: 50px 0;
+}
+
+.masonry {
+  column-count: 4;
+  column-gap: 10px;
+  
+  @include responsive(xs) {
+    column-count: 2;
+  }
+
+  @include responsive(sm) {
+    column-count: 3;
+  }
+
+  img {
+    border-radius: 10px;
+    margin-bottom: 10px;
+  }
+}
+
+.gallery-item {
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  @include size(100%, 500px);
+}
+
+.modal-content {
+  border: 0;
+  border-radius: 10px;
+}
+
+.modal-header {
+  flex-direction: column;
+  align-items: center;
+
+  p {
+    text-align: center;
+  }
+}
+
+.two-btn-cta {
+  display: flex;
+  justify-content: center;
+  margin: 50px auto 0;
+  width: 40%;
+
+  button {
+    margin: 0 20px;
+  }
+}
+
+// Products DEMO 01
+.product-image {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  margin-bottom: 30px;
+  height: 630px;
+}
+
+.left-side, .right-side {
+  .product-image {
+    height: 300px;
+  }
+}
+
+// Products DEMO 02
 .product-section {
   display: flex;
   margin-bottom: 70px;
@@ -344,88 +447,52 @@ footer {
   left: -30%;
 }
 
-.banner {
-  background-image: url('https://images.unsplash.com/photo-1501959181532-7d2a3c064642?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=9ffb47d2c8a236bae5e5bb86b2c400b9&auto=format&fit=crop&w=1070&q=80');
+// Products DEMO 03
+.page-tabs-nav li {
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
+.products-card {
+  display: inline-block;
+  height: 375px;
+  width: 100%;
   background-repeat: no-repeat;
-  background-attachment: fixed;
   background-position: center;
+  -webkit-background-size: cover;
   background-size: cover;
-  height: 350px;
-  padding: 60px 0;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
   position: relative;
-
-  &::before {
-    @include pseudo();
-    @include size(100%,100%);
-    background-color: rgba( $black, .5 );
-  }
-
-  .banner-content {
-    text-align: center;
-    z-index: 1;
-
-    p {
-      color: $white;
-      font-family: $montserrat;
-      font-size: 25px;
-      font-weight: 600;
-    }
-  }
-}
-
-.gallery {
-  padding: 50px 0;
-}
-
-.masonry {
-  column-count: 4;
-  column-gap: 10px;
-  
-  @include responsive(xs) {
-    column-count: 2;
-  }
-
-  @include responsive(sm) {
-    column-count: 3;
-  }
-
-  img {
-    margin-bottom: 10px;
-  }
-}
-
-.gallery-item {
-  background-position: center;
-  background-size: contain;
-  background-repeat: no-repeat;
-  @include size(100%, 500px);
-}
-
-.modal-content {
-  border: 0;
   border-radius: 10px;
 }
 
-.modal-header {
-  flex-direction: column;
+.small-title {
+  line-height: 35px;
+  margin-bottom: 0;
+  position: absolute;
+  top: 60px;
+  bottom: 60px;
+  left: 0;
+  right: 0;
+  background-color: rgba(252, 252, 252, 0.8);
+  display: flex;
   align-items: center;
-
-  p {
-    text-align: center;
-  }
+  justify-content: center;
+  flex-direction: column;
+  transition: opacity 0.5s;
 }
 
-.two-btn-cta {
-  display: flex;
-  justify-content: center;
-  margin: 50px auto 0;
-  width: 40%;
+.tab-pane {
+  padding: 0 15px;
 
-  button {
-    margin: 0 20px;
+  h1 {
+    font-family: $montserrat;
+    font-size: 25px;
+    font-weight: 600;
+  }
+
+  p {
+    font-family: $opensans;
+    font-size: 15px;
+    @include truncate(100px, 3);
   }
 }
