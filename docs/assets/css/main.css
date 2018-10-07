@@ -25,7 +25,7 @@ a:hover {
 
 .main-btn:hover {
   box-shadow: 0 13px 15px 0 rgba(0, 0, 0, 0.25);
-  transform: translateY(-10px);
+  transform: translateY(-5px);
   transition: all ease-in-out .5s;
 }
 
@@ -87,6 +87,11 @@ a:hover {
   color: #fff;
   font-family: "Montserrat", sans-serif;
   font-size: 60px;
+  z-index: 1;
+}
+
+.home-bg-mask button {
+  z-index: 1;
 }
 
 .services {
@@ -95,7 +100,7 @@ a:hover {
 }
 
 .services::before {
-  background-image: url("../img/wave_double.png");
+  background-image: url("../img/wave_double.svg");
   background-size: cover;
   content: '';
   position: absolute;
@@ -142,6 +147,10 @@ a:hover {
   padding: 50px 0;
 }
 
+.blog .slick-prev:before, .blog .slick-next:before {
+  color: #000;
+}
+
 .post-wrapper {
   height: 500px;
   opacity: .5;
@@ -159,7 +168,7 @@ a:hover {
 
 .post-content::after {
   content: '';
-  width: 2px;
+  width: 3px;
   height: 30px;
   margin: 0 auto;
   position: absolute;
@@ -218,13 +227,13 @@ a:hover {
 
 .post-date .month, .post-date .day {
   font-weight: 700;
-  font-size: 16px;
+  font-size: 14px;
   font-family: "Open Sans", sans-serif;
   text-transform: uppercase;
 }
 
 .post-date .day {
-  font-size: 30px;
+  font-size: 20px;
 }
 
 .sticky-custom {
@@ -335,13 +344,38 @@ footer a {
 }
 
 .banner {
-  background-color: #404b4f;
-  height: 300px;
+  background-image: url("https://images.unsplash.com/photo-1501959181532-7d2a3c064642?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=9ffb47d2c8a236bae5e5bb86b2c400b9&auto=format&fit=crop&w=1070&q=80");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  height: 350px;
   padding: 60px 0;
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: center;
+  position: relative;
+}
+
+.banner::before {
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.banner .banner-content {
+  text-align: center;
+  z-index: 1;
+}
+
+.banner .banner-content p {
+  color: #fff;
+  font-family: "Montserrat", sans-serif;
+  font-size: 25px;
+  font-weight: 600;
 }
 
 .gallery {
@@ -355,4 +389,37 @@ footer a {
 
 .masonry img {
   margin-bottom: 10px;
+}
+
+.gallery-item {
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 500px;
+  width: 100%;
+}
+
+.modal-content {
+  border: 0;
+  border-radius: 10px;
+}
+
+.modal-header {
+  flex-direction: column;
+  align-items: center;
+}
+
+.modal-header p {
+  text-align: center;
+}
+
+.two-btn-cta {
+  display: flex;
+  justify-content: center;
+  margin: 50px auto 0;
+  width: 40%;
+}
+
+.two-btn-cta button {
+  margin: 0 20px;
 }

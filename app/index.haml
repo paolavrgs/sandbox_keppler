@@ -117,9 +117,13 @@
             %img.img-fluid{ src: 'https://images.unsplash.com/photo-1497888329096-51c27beff665?auto=format&fit=crop&w=751&q=80' }
           %a{ href: '', 'data-toggle' => 'modal', 'data-target' => '#modalGallery' }
             %img.img-fluid{ src: 'https://images.unsplash.com/photo-1502865787650-3f8318917153?auto=format&fit=crop&w=334&q=80' }
+        .two-btn-cta
+          %button.btn.main-btn Ver más
+          %button.btn.main-btn Probar ahora
     %section.banner{ id: 'banner' }
-      %p Lorem ipsum dolor sit amet consectetur adipisicing elit.
-      %button.btn.main-btn Probar ahora
+      .banner-content
+        %p Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        %button.btn.main-btn Probar ahora
     %section.blog{ id: 'blog' }
       .container
         .section-header
@@ -137,6 +141,9 @@
                 .post-date
                   %span.day 25
                   %span.month Septiembre
+        .two-btn-cta
+          %button.btn.main-btn Ver más
+          %button.btn.main-btn Probar ahora
     %footer
       .container
         .row
@@ -167,13 +174,17 @@
       .modal-dialog{ role: 'document' }
         .modal-content
           .modal-header
-            %h5.modal-title Nombre del album
             %button.close{ 'aria-label' => 'Close', 'data-dismiss' => 'modal', type: 'button' }
               %span{ 'aria-hidden' => 'true' } ×
+            %h5.modal-title Nombre del album
+            %p Descripcion del album. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nesciunt nisi.
           .modal-body
             .single-item
-              - 5.times do |x|
-                %h1= x+1
+              .gallery-item{ style: 'background-image: url("https://images.unsplash.com/photo-1485963631004-f2f00b1d6606?auto=format&fit=crop&w=668&q=80")' }
+              .gallery-item{ style: 'background-image: url("https://images.unsplash.com/photo-1502865787650-3f8318917153?auto=format&fit=crop&w=334&q=80")' }
+              .gallery-item{ style: 'background-image: url("https://images.unsplash.com/photo-1487376318617-f43c7b41e2e2?auto=format&fit=crop&w=750&q=80")' }
+              .gallery-item{ style: 'background-image: url("https://images.unsplash.com/photo-1502550900787-e956c314a221?auto=format&fit=crop&w=334&q=80")' }
+              .gallery-item{ style: 'background-image: url("https://images.unsplash.com/photo-1500816558239-6b91f4256ead?auto=format&fit=crop&w=331&q=80")' }
     %script{ src: 'https://code.jquery.com/jquery-3.3.1.min.js' }
     %script{ src: 'https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js' }
     %script{ src: 'https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js' }
