@@ -27,7 +27,23 @@ $('.multiple-items').slick({
 $('.products-slick').slick({
   infinite: true,
   slidesToShow: 3,
-  slidesToScroll: 1
+  slidesToScroll: 1,
+  responsive: [
+    {
+      breakpoint: 480,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1
+      }
+    },
+    {
+      breakpoint: 991,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 1
+      }
+    }
+  ]
 });
 
 // TABS CLICK ADD CLASS ACTIVE
