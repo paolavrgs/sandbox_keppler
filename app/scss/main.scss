@@ -17,6 +17,28 @@ a {
   }
 }
 
+.slick-prev:before, .slick-next:before {
+  color: $keppler;
+}
+
+label {
+  font-family: $opensans;
+  font-weight: 600;
+}
+
+textarea {
+  resize: none;
+}
+
+.form-control {
+
+  &:focus {
+    border-color: $keppler;
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem transparent;
+  }
+}
+
 .main-btn {
   border-radius: 15px;
   padding: 8px 24px;
@@ -31,10 +53,37 @@ a {
   }
 }
 
-.btn-folly {
+.btn-orange {
   color: $white;
   font-weight: 700;
-  margin-top: 30px;
+  background-color: $keppler;
+  // margin-top: 30px;
+}
+
+.btn-flat {
+  color: $black;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-family: $opensans;
+  position: relative;
+  background-color: transparent;
+
+  &:hover {
+    color: $black;
+  }
+
+  &:hover::before {
+    width: 120%;
+    transition: width .5s;
+  }
+
+  &::before {
+    @include pseudo();
+    @include size(50%, 3px);
+    background-color: $black;
+    bottom: 10px;
+    transition: width .5s;
+  }
 }
 
 .section-title {
@@ -66,8 +115,9 @@ a {
 }
 
 .home-bg {
-  background-image: url('../img/img_bg_2.jpg');
+  background-image: url('https://images.unsplash.com/photo-1527515862127-a4fc05baf7a5?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=94bc060b3ea71111a8caeb6e1ace30f0&auto=format&fit=crop&w=1050&q=80');
   background-size: cover;
+  background-position: center;
   height: 90vh;
   position: relative;
   width: 100%;
@@ -78,7 +128,7 @@ a {
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
-  background-color: rgba(0, 0, 0, .5);
+  background-color: rgba(0, 0, 0, .4);
   padding: 0 50px;
   position: absolute;
   @include size(100%);
@@ -96,7 +146,7 @@ a {
 }
 
 .services {
-  padding: 50px 0;
+  padding: 70px 0;
   position: relative;
 
   &::before {
@@ -142,16 +192,12 @@ a {
 }
 
 .products {
-  padding: 50px 0;
+  padding: 70px 0;
   position: relative;
 }
 
 .blog {
-  padding: 50px 0;
-
-  .slick-prev:before, .slick-next:before {
-    color: $black;
-  }
+  padding: 70px 0;
 }
 
 .post-wrapper {
@@ -221,7 +267,7 @@ a {
 .post-date {
   width: 100%;
   text-align: center;
-  margin-top: 30px;
+  margin-top: 20px;
   display: flex;
   flex-direction: column;
 
@@ -255,37 +301,43 @@ a {
 }
 
 footer {
-  background-color: #e2e2e2;
-  color: $keppler;
   font-family: $opensans;
-  height: 350px;
+  color: rgba($black, .5);
   position: relative;
   padding: 50px 0;
   width: 100%;
 
+  span {
+    font-weight: 700;
+    color: $keppler;
+    text-transform: uppercase;
+  }
+
   li {
     list-style: none;
     margin: 10px 0;
-    font-weight: 600;
+    font-weight: 500;
 
     &:first-child {
       font-weight: 700;
+      color: $keppler;
       text-transform: uppercase;
     }
   }
 
   a {
-    color: $keppler;
+    color: rgba($black, .5);
   }
 }
 
 .footer-logo {
   align-items: center;
   display: flex;
-  height: 180px;
+  justify-content: center;
+  margin-bottom: 50px;
 
   img {
-    width: 60%;
+    width: 200px;
   }  
 }
 
@@ -323,7 +375,7 @@ footer {
 }
 
 .gallery {
-  padding: 50px 0;
+  padding: 70px 0;
 }
 
 .masonry {
@@ -351,18 +403,35 @@ footer {
   @include size(100%, 500px);
 }
 
+.modal-dialog {
+  max-width: 50vw;
+}
+
 .modal-content {
   border: 0;
-  border-radius: 10px;
+  border-radius: 30px;
+  box-shadow: 1px 1px 20px rgba(0,0,0,.5);
 }
 
 .modal-header {
   flex-direction: column;
   align-items: center;
 
+  .modal-title {
+    font-family: $montserrat;
+    font-size: 20px;
+    font-weight: 600;
+  }
+
   p {
+    font-family: $opensans;
+    font-size: 15px;
     text-align: center;
   }
+}
+
+.modal-body {
+  padding: 15px 30px;
 }
 
 .two-btn-cta {
@@ -469,11 +538,18 @@ footer {
   line-height: 35px;
   margin-bottom: 0;
   position: absolute;
-  top: 60px;
-  bottom: 60px;
+  top: 0;
+  bottom: 0;
   left: 0;
+  opacity: 1;
+  background-color: rgba(255, 255, 255, .5);
   right: 0;
-  background-color: rgba(252, 252, 252, 0.8);
+  color: $black;
+  font-family: $opensans;
+  font-size: 20px;
+  text-align: center;
+  padding: 15px;
+  font-weight: 600;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -481,11 +557,17 @@ footer {
   transition: opacity 0.5s;
 }
 
+.products-card.active .small-title {
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+
 .tab-pane {
   padding: 0 15px;
 
   h1 {
-    font-family: $montserrat;
+    font-family: $opensans;
     font-size: 25px;
     font-weight: 600;
   }
@@ -495,4 +577,90 @@ footer {
     font-size: 15px;
     @include truncate(100px, 3);
   }
+}
+
+.tab-content {
+  height: 380px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.btn-products {
+  display: flex;
+  justify-content: space-between;
+  margin: 50px 0;
+}
+
+.products-slick {
+  .slick-dots li {
+    @include size(10px, 5px);
+    transition: width .5s;
+  }
+
+  .slick-dots li button {
+    @include size(10px, 5px);
+    padding: unset;
+    transition: width .5s;
+  }
+
+  .slick-dots li button:before {
+    content: '';
+    background-color: $black;
+    @include size(10px, 5px);
+    border-radius: 10px;
+    transition: width .5s;
+  }
+
+  .slick-dots li.slick-active {
+    @include size(15px, 5px);
+    transition: width .5s;
+  }
+
+  .slick-dots li.slick-active button {
+    @include size(15px, 5px);
+    padding: unset;
+    transition: width .5s;
+  }
+
+  .slick-dots li.slick-active button:before {
+    @include size(15px, 5px);
+    transition: width .5s;
+  }
+}
+
+footer::before {
+  background-image: url('../img/wave_2.png');
+  background-size: cover;
+  @include pseudo();
+  height: 100px;
+  top: -99px;
+  width: 100%;
+}
+
+.contact {
+  background-color: #f5f5f5;
+  padding: 70px 0 150px;
+}
+
+.contact-box {
+  background-color: $white;
+  @include size(100%, 500px);
+  border-radius: 30px;
+  padding: 50px;
+  box-shadow: 0 3px 15px 0 rgba(0,0,0,.25);
+
+  textarea {
+    height: 140px;
+  }
+}
+
+.map-inner-box{
+  iframe {
+    @include size(100%);
+  }
+}
+
+.contact-inner-box {
+  padding-left: 40px;
 }

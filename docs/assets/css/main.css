@@ -15,6 +15,25 @@ a:hover {
   color: inherit;
 }
 
+.slick-prev:before, .slick-next:before {
+  color: #f44336;
+}
+
+label {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 600;
+}
+
+textarea {
+  resize: none;
+}
+
+.form-control:focus {
+  border-color: #f44336;
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem transparent;
+}
+
 .main-btn {
   border-radius: 15px;
   padding: 8px 24px;
@@ -29,10 +48,38 @@ a:hover {
   transition: all ease-in-out .5s;
 }
 
-.btn-folly {
+.btn-orange {
   color: #fff;
   font-weight: 700;
-  margin-top: 30px;
+  background-color: #f44336;
+}
+
+.btn-flat {
+  color: #000;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-family: "Open Sans", sans-serif;
+  position: relative;
+  background-color: transparent;
+}
+
+.btn-flat:hover {
+  color: #000;
+}
+
+.btn-flat:hover::before {
+  width: 120%;
+  transition: width .5s;
+}
+
+.btn-flat::before {
+  content: "";
+  position: absolute;
+  height: 3px;
+  width: 50%;
+  background-color: #000;
+  bottom: 10px;
+  transition: width .5s;
 }
 
 .section-title {
@@ -64,8 +111,9 @@ a:hover {
 }
 
 .home-bg {
-  background-image: url("../img/img_bg_2.jpg");
+  background-image: url("https://images.unsplash.com/photo-1527515862127-a4fc05baf7a5?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=94bc060b3ea71111a8caeb6e1ace30f0&auto=format&fit=crop&w=1050&q=80");
   background-size: cover;
+  background-position: center;
   height: 90vh;
   position: relative;
   width: 100%;
@@ -76,7 +124,7 @@ a:hover {
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.4);
   padding: 0 50px;
   position: absolute;
   height: 100%;
@@ -95,7 +143,7 @@ a:hover {
 }
 
 .services {
-  padding: 50px 0;
+  padding: 70px 0;
   position: relative;
 }
 
@@ -139,16 +187,12 @@ a:hover {
 }
 
 .products {
-  padding: 50px 0;
+  padding: 70px 0;
   position: relative;
 }
 
 .blog {
-  padding: 50px 0;
-}
-
-.blog .slick-prev:before, .blog .slick-next:before {
-  color: #000;
+  padding: 70px 0;
 }
 
 .post-wrapper {
@@ -220,7 +264,7 @@ a:hover {
 .post-date {
   width: 100%;
   text-align: center;
-  margin-top: 30px;
+  margin-top: 20px;
   display: flex;
   flex-direction: column;
 }
@@ -253,38 +297,44 @@ a:hover {
 }
 
 footer {
-  background-color: #e2e2e2;
-  color: #f44336;
   font-family: "Open Sans", sans-serif;
-  height: 350px;
+  color: rgba(0, 0, 0, 0.5);
   position: relative;
   padding: 50px 0;
   width: 100%;
 }
 
+footer span {
+  font-weight: 700;
+  color: #f44336;
+  text-transform: uppercase;
+}
+
 footer li {
   list-style: none;
   margin: 10px 0;
-  font-weight: 600;
+  font-weight: 500;
 }
 
 footer li:first-child {
   font-weight: 700;
+  color: #f44336;
   text-transform: uppercase;
 }
 
 footer a {
-  color: #f44336;
+  color: rgba(0, 0, 0, 0.5);
 }
 
 .footer-logo {
   align-items: center;
   display: flex;
-  height: 180px;
+  justify-content: center;
+  margin-bottom: 50px;
 }
 
 .footer-logo img {
-  width: 60%;
+  width: 200px;
 }
 
 .banner {
@@ -323,7 +373,7 @@ footer a {
 }
 
 .gallery {
-  padding: 50px 0;
+  padding: 70px 0;
 }
 
 .masonry {
@@ -356,9 +406,14 @@ footer a {
   width: 100%;
 }
 
+.modal-dialog {
+  max-width: 50vw;
+}
+
 .modal-content {
   border: 0;
-  border-radius: 10px;
+  border-radius: 30px;
+  box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.5);
 }
 
 .modal-header {
@@ -366,8 +421,20 @@ footer a {
   align-items: center;
 }
 
+.modal-header .modal-title {
+  font-family: "Montserrat", sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+}
+
 .modal-header p {
+  font-family: "Open Sans", sans-serif;
+  font-size: 15px;
   text-align: center;
+}
+
+.modal-body {
+  padding: 15px 30px;
 }
 
 .two-btn-cta {
@@ -470,15 +537,27 @@ footer a {
   line-height: 35px;
   margin-bottom: 0;
   position: absolute;
-  top: 60px;
-  bottom: 60px;
+  top: 0;
+  bottom: 0;
   left: 0;
+  opacity: 1;
+  background-color: rgba(255, 255, 255, 0.5);
   right: 0;
-  background-color: rgba(252, 252, 252, 0.8);
+  color: #000;
+  font-family: "Open Sans", sans-serif;
+  font-size: 20px;
+  text-align: center;
+  padding: 15px;
+  font-weight: 600;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  transition: opacity 0.5s;
+}
+
+.products-card.active .small-title {
+  opacity: 0;
   transition: opacity 0.5s;
 }
 
@@ -487,7 +566,7 @@ footer a {
 }
 
 .tab-pane h1 {
-  font-family: "Montserrat", sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-size: 25px;
   font-weight: 600;
 }
@@ -501,4 +580,95 @@ footer a {
   -webkit-line-clamp: 3;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+
+.tab-content {
+  height: 380px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.btn-products {
+  display: flex;
+  justify-content: space-between;
+  margin: 50px 0;
+}
+
+.products-slick .slick-dots li {
+  height: 5px;
+  width: 10px;
+  transition: width .5s;
+}
+
+.products-slick .slick-dots li button {
+  height: 5px;
+  width: 10px;
+  padding: unset;
+  transition: width .5s;
+}
+
+.products-slick .slick-dots li button:before {
+  content: '';
+  background-color: #000;
+  height: 5px;
+  width: 10px;
+  border-radius: 10px;
+  transition: width .5s;
+}
+
+.products-slick .slick-dots li.slick-active {
+  height: 5px;
+  width: 15px;
+  transition: width .5s;
+}
+
+.products-slick .slick-dots li.slick-active button {
+  height: 5px;
+  width: 15px;
+  padding: unset;
+  transition: width .5s;
+}
+
+.products-slick .slick-dots li.slick-active button:before {
+  height: 5px;
+  width: 15px;
+  transition: width .5s;
+}
+
+footer::before {
+  background-image: url("../img/wave_2.png");
+  background-size: cover;
+  content: "";
+  position: absolute;
+  height: 100px;
+  top: -99px;
+  width: 100%;
+}
+
+.contact {
+  background-color: #f5f5f5;
+  padding: 70px 0 150px;
+}
+
+.contact-box {
+  background-color: #fff;
+  height: 500px;
+  width: 100%;
+  border-radius: 30px;
+  padding: 50px;
+  box-shadow: 0 3px 15px 0 rgba(0, 0, 0, 0.25);
+}
+
+.contact-box textarea {
+  height: 140px;
+}
+
+.map-inner-box iframe {
+  height: 100%;
+  width: 100%;
+}
+
+.contact-inner-box {
+  padding-left: 40px;
 }

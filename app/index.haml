@@ -34,7 +34,7 @@
   %head
     = render('app/partials/_head.haml')
   %body
-    %nav.navbar.navbar-expand-lg.navbar-light.sticky-custom
+    %nav.navbar.navbar-expand-lg.navbar-light
       %a.navbar-brand.d-md-none{ href: '#' }
         %img{ src: 'assets/img/keppler_logo.png', alt: 'Keppler' }
       %button.navbar-toggler{ 'aria-controls' => 'sandbox-nav', 'aria-expanded' => 'false', 'aria-label' => 'Toggle navigation', 'data-target' => '#sandbox-nav', 'data-toggle' => 'collapse', type: 'button' }
@@ -72,7 +72,7 @@
             %span.element
             %br
             con Keppler
-          %button.btn.main-btn Probar ahora
+          %button.btn.main-btn.btn-orange Probar ahora
     %section.services{ id: 'services' }
       .container
         %h1.section-title Servicios
@@ -118,7 +118,7 @@
             %ul.nav.page-tabs-nav.products-slick{id: 'myTab', role: "tablist"}
               - 5.times do |x|
                 %li
-                  %a.products-card{ class: "#{x==0 ? 'active' : ''}", id: "product#{x}-tab", 'aria-controls' => "product-#{x}", 'aria-selected' => "#{x==0 ? 'true' : 'false'}", 'data-slick-current' => "#{x}", 'data-toggle' => 'tab', href: "#product-#{x}", role: 'tab', style: 'background-image: url("https://images.unsplash.com/photo-1530114722439-f5cbd4dad762?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=e4f4a6fee4adc30b60515fb522061cd8&auto=format&fit=crop&w=400&q=60");' }
+                  %a.products-card{ 'data-id': "#{x}", class: "#{x==0 ? 'active' : ''}", id: "product#{x}-tab", 'aria-controls' => "product-#{x}", 'aria-selected' => "#{x==0 ? 'true' : 'false'}", 'data-slick-current' => "#{x}", 'data-toggle' => 'tab', href: "#product-#{x}", role: 'tab', style: 'background-image: url("https://images.unsplash.com/photo-1530114722439-f5cbd4dad762?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=e4f4a6fee4adc30b60515fb522061cd8&auto=format&fit=crop&w=400&q=60");' }
                     %span.small-title Producto numero #{x}
           .col-md-4
             #myTabContent.tab-content
@@ -126,8 +126,9 @@
                 .tab-pane.fade{id: "product-#{x}", class: "#{x==0 ? 'active show' : ''}", "aria-labelledby" => "product#{x}-tab", role: "tabpanel"}
                   %h1 Producto numero #{x}
                   %p Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis, illum quod tempore quam facilis pariatur sapiente adipisci odit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis, illum quod tempore quam facilis pariatur sapiente adipisci odit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis, illum quod tempore quam facilis pariatur sapiente adipisci odit.
-                  %button.btn.main-btn Ver más
-                  %button.btn.main-btn Probar ahora
+                  .btn-products
+                    %a.btn-flat{ href: '#' } Ver más
+                    %button.btn.main-btn.btn-orange Probar ahora
 
     %section.gallery{ id: 'gallery' }
       %h1.section-title Galería
@@ -144,33 +145,34 @@
           %a{ href: '', 'data-toggle' => 'modal', 'data-target' => '#modalGallery' }
             %img.img-fluid{ src: 'https://images.unsplash.com/photo-1497888329096-51c27beff665?auto=format&fit=crop&w=751&q=80' }
           %a{ href: '', 'data-toggle' => 'modal', 'data-target' => '#modalGallery' }
-            %img.img-fluid{ src: 'https://images.unsplash.com/photo-1505253468034-514d2507d914?auto=format&fit=crop&w=334&q=80' }
+            %img.img-fluid{ src: 'https://images.unsplash.com/photo-1485963631004-f2f00b1d6606?auto=format&fit=crop&w=668&q=80' }
           %a{ href: '', 'data-toggle' => 'modal', 'data-target' => '#modalGallery' }
-            %img.img-fluid{ src: 'https://images.unsplash.com/photo-1502550900787-e956c314a221?auto=format&fit=crop&w=334&q=80' }
+            %img.img-fluid{ src: 'https://images.unsplash.com/photo-1505253468034-514d2507d914?auto=format&fit=crop&w=334&q=80' }
           %a{ href: '', 'data-toggle' => 'modal', 'data-target' => '#modalGallery' }
             %img.img-fluid{ src: 'https://images.unsplash.com/photo-1455853659719-4b521eebc76d?auto=format&fit=crop&w=750&q=80' }
           %a{ href: '', 'data-toggle' => 'modal', 'data-target' => '#modalGallery' }
             %img.img-fluid{ src: 'https://images.unsplash.com/photo-1497888329096-51c27beff665?auto=format&fit=crop&w=751&q=80' }
           %a{ href: '', 'data-toggle' => 'modal', 'data-target' => '#modalGallery' }
+            %img.img-fluid{ src: 'https://images.unsplash.com/photo-1502550900787-e956c314a221?auto=format&fit=crop&w=334&q=80' }
+          %a{ href: '', 'data-toggle' => 'modal', 'data-target' => '#modalGallery' }
             %img.img-fluid{ src: 'https://images.unsplash.com/photo-1502865787650-3f8318917153?auto=format&fit=crop&w=334&q=80' }
         .two-btn-cta
-          %button.btn.main-btn Ver más
-          %button.btn.main-btn Probar ahora
+          %a.btn-flat{ href: '#' } Ver más
+          %button.btn.main-btn.btn-orange Probar galería
     %section.banner{ id: 'banner' }
       .banner-content
         %p Lorem ipsum dolor sit amet consectetur adipisicing elit.
-        %button.btn.main-btn Probar ahora
+        %button.btn.main-btn.btn-orange Probar ahora
     %section.blog{ id: 'blog' }
       .container
-        .section-header
-          %h1.section-title Blog
+        %h1.section-title Blog
         .row.multiple-items
           - 6.times do
             .col-lg-4.col-xs-12
               .post-wrapper
                 .post-content
                   .post-img
-                    %img{ src: 'assets/img/img_3.jpg', alt: '' }
+                    %img{ src: 'https://images.unsplash.com/photo-1528279027-68f0d7fce9f1?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=3b968702b74dc339188bfbf29ae6c634&auto=format&fit=crop&w=1050&q=80', alt: '' }
                   .post-text
                     %h4.post-title Titulo del Blog
                     %p It does get a bit more tricky though. Both EMs and pixels have their downfalls with media queries.
@@ -178,20 +180,61 @@
                   %span.day 25
                   %span.month Septiembre
         .two-btn-cta
-          %button.btn.main-btn Ver más
-          %button.btn.main-btn Probar ahora
+          %a.btn-flat{ href: '#' } Ver más
+          %button.btn.main-btn.btn-orange Probar blog
+    %section.contact{ id: 'contact' }
+      .container
+        %h1.section-title Contacto
+        .row
+          .contact-box
+            .row
+              .col-lg-6.map-inner-box
+                %iframe{allowfullscreen: "", frameborder: "0", src: "https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d488.3455003190671!2d-70.19853299928293!3d11.711120408542463!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sve!4v1539048048564", style: "border:0"}
+              .col-lg-6.contact-inner-box
+                %form
+                  .row
+                    .col-lg-6
+                      .form-group
+                        %label Nombres
+                        %input.form-control{ type: "email" }
+                    .col-lg-6
+                      .form-group
+                        %label Correo Electrónico
+                        %input.form-control{ type: "email" }
+                    .col-lg-12
+                      .form-group
+                        %label Asunto
+                        %input.form-control{ type: "email" }
+                    .col-lg-12
+                      .form-group
+                        %label Mensaje
+                        %textarea.form-control{ type: "email" }
+                  %button.btn.main-btn.btn-orange.float-right Enviar
     %footer
       .container
         .row
-          .col-lg-4
+          .d-flex.justify-content-center.w-100
             .footer-logo
               %img{ src: 'assets/img/keppler_logo.png' }
           .col-lg-4
+            %span About
+            %p Lorem ipsum dolor sit, amet consectetur adipisicing elit. Non, reiciendis blanditiis nam veniam beatae vitae ad quis maxime praesentium, quam ducimus, eius dolores. Laudantium, provident vitae? Commodi, dicta quos. Ratione.
+            %ul.list-inline{style:'padding-left:0;'}
+              %li.list-inline-item
+                %a.nav-item.nav-link{ href: '#' }
+                  %i.fab.fa-facebook-f
+              %li.list-inline-item
+                %a.nav-item.nav-link{ href: '#' }
+                  %i.fab.fa-twitter
+              %li.list-inline-item
+                %a.nav-item.nav-link{ href: '#' }
+                  %i.fab.fa-instagram
+          .col-lg-4
             %ul.footer-contact
               %li Contacto
-              %li Correos
-              %li Telefonos
-              %li Direccion
+              %li yourcompany@gmail.com
+              %li (+1) 450450450
+              %li 2662 Fidler Drive, San Antonio, TX
           .col-lg-4
             %ul.footer-sitemap
               %li Sitemap
