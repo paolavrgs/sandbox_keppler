@@ -76,6 +76,10 @@
     %section.services{ id: 'services' }
       .container
         %h1.section-title Servicios
+        .section-title-separator
+          %span.large
+          %span.medium
+          %span.small
         .row
           - @services.map do |service|
             .col-lg-4
@@ -85,33 +89,11 @@
                 %h2.service-title= service.title
                 %p.service-text Lorem ipsum dolor sit amet, consectetur adipisicing elit.
     %section.products{ id: 'products' }
-      %h1.section-title Catálogo de Productos
-      // DEMO 01
-      -# .container
-        .row
-          .col-md-4
-            .products-wrapper.left-side
-              %div{ style: 'column-count:1;' }
-                .product-image{ style: 'background-image:url("https://images.unsplash.com/photo-1538842101555-57791b14c1b7?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=b501b09e90d80c094fde815e1470b5e0&auto=format&fit=crop&w=400&q=60")' }
-                .product-image{ style: 'background-image:url("https://images.unsplash.com/photo-1504674900247-0877df9cc836?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=67fb2e7b1fbe39b18b51146234ef38aa&auto=format&fit=crop&w=400&q=60")' }
-          .col-md-4
-            .products-wrapper.middle-side
-              %div{ style: 'column-count:1;' }
-                .product-image{ style: 'background-image:url("https://images.unsplash.com/photo-1524386189627-88c26ac1cc69?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=0483f41b27d4e19df782f8908576402e&auto=format&fit=crop&w=333&q=80")' }
-          .col-md-4
-            .products-wrapper.right-side
-              %div{ style: 'column-count:1;' }
-                .product-image{ style: 'background-image:url("https://images.unsplash.com/photo-1530114722439-f5cbd4dad762?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=e4f4a6fee4adc30b60515fb522061cd8&auto=format&fit=crop&w=400&q=60")' }
-                .product-image{ style: 'background-image:url("https://images.unsplash.com/photo-1527664557558-a2b352fcf203?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=4341976025ae49162643ccdb47a72a4d&auto=format&fit=crop&w=400&q=60")' }
-      // DEMO 02
-      -# - 2.times do |x|
-        .product-section{ class: "#{x.even? ? 'justify-content-end' : 'justify-content-start'}" }
-          .product-big-image{ class: "#{x.even? ? 'product-image-right' : 'product-image-left'}" }
-            .product-text{ class: "#{x.even? ? 'product-text-left' : 'product-text-right'}" }
-              %h2 Nombre del Producto
-              %p Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae porro quo officiis repudiandae nisi aliquam suscipit, praesentium hic quia molestiae numquam soluta. Ipsa velit minus iste blanditiis veritatis consectetur enim?
-              %button.btn.main-btn Probar ahora
-      // DEMO 03
+      %h1.section-title Productos
+      .section-title-separator
+        %span.large
+        %span.medium
+        %span.small
       .container
         .row
           .col-md-8
@@ -132,6 +114,10 @@
 
     %section.gallery{ id: 'gallery' }
       %h1.section-title Galería
+      .section-title-separator
+        %span.large
+        %span.medium
+        %span.small
       .container
         .masonry
           %a{ href: '', 'data-toggle' => 'modal', 'data-target' => '#modalGallery' }
@@ -166,25 +152,34 @@
     %section.blog{ id: 'blog' }
       .container
         %h1.section-title Blog
+        .section-title-separator
+          %span.large
+          %span.medium
+          %span.small
         .row.multiple-items
           - 6.times do
             .col-lg-4.col-xs-12
-              .post-wrapper
-                .post-content
-                  .post-img
-                    %img{ src: 'https://images.unsplash.com/photo-1528279027-68f0d7fce9f1?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=3b968702b74dc339188bfbf29ae6c634&auto=format&fit=crop&w=1050&q=80', alt: '' }
-                  .post-text
-                    %h4.post-title Titulo del Blog
-                    %p It does get a bit more tricky though. Both EMs and pixels have their downfalls with media queries.
-                .post-date
-                  %span.day 25
-                  %span.month Septiembre
+              %a{ href: '' }
+                .post-wrapper
+                  .post-content
+                    .post-img
+                      %img{ src: 'https://images.unsplash.com/photo-1528279027-68f0d7fce9f1?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=3b968702b74dc339188bfbf29ae6c634&auto=format&fit=crop&w=1050&q=80', alt: '' }
+                    .post-text
+                      %h4.post-title Titulo del Blog
+                      %p It does get a bit more tricky though. Both EMs and pixels have their downfalls with media queries.
+                  .post-date
+                    %span.day 25
+                    %span.month Septiembre
         .two-btn-cta
           %a.btn-flat{ href: '#' } Ver más
           %button.btn.main-btn.btn-orange Probar blog
     %section.contact{ id: 'contact' }
       .container
         %h1.section-title Contacto
+        .section-title-separator
+          %span.large
+          %span.medium
+          %span.small
         .row
           .contact-box
             .row
