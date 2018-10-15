@@ -34,7 +34,7 @@
   %head
     = render('app/partials/_head.haml')
   %body
-    %nav.navbar.navbar-expand-lg.navbar-light.sticky-custom
+    %nav.navbar.navbar-expand-lg.sticky-custom
       %a.navbar-brand.d-md-none{ href: '#' }
         %img{ src: 'assets/img/keppler_logo.png', alt: 'Keppler' }
       %button.navbar-toggler{ 'aria-controls' => 'sandbox-nav', 'aria-expanded' => 'false', 'aria-label' => 'Toggle navigation', 'data-target' => '#sandbox-nav', 'data-toggle' => 'collapse', type: 'button' }
@@ -212,24 +212,20 @@
             .footer-logo
               %img{ src: 'assets/img/keppler_logo.png' }
           .col-lg-4
-            %span About
+            %li About
             %p Lorem ipsum dolor sit, amet consectetur adipisicing elit. Non, reiciendis blanditiis nam veniam beatae vitae ad quis maxime praesentium, quam ducimus, eius dolores. Laudantium, provident vitae? Commodi, dicta quos. Ratione.
-            %ul.list-inline{style:'padding-left:0;'}
-              %li.list-inline-item
-                %a.nav-item.nav-link{ href: '#' }
-                  %i.fab.fa-facebook-f
-              %li.list-inline-item
-                %a.nav-item.nav-link{ href: '#' }
-                  %i.fab.fa-twitter
-              %li.list-inline-item
-                %a.nav-item.nav-link{ href: '#' }
-                  %i.fab.fa-instagram
           .col-lg-4
             %ul.footer-contact
               %li Contacto
-              %li yourcompany@gmail.com
-              %li (+1) 450450450
-              %li 2662 Fidler Drive, San Antonio, TX
+              %li 
+                %i.fa.fa-envelope
+                yourcompany@gmail.com
+              %li
+                %i.fa.fa-phone
+                (+1) 450450450
+              %li
+                %i.fa.fa-map-marker
+                2662 Fidler Drive, San Antonio, TX
           .col-lg-4
             %ul.footer-sitemap
               %li Sitemap

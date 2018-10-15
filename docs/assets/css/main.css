@@ -22,6 +22,7 @@ a:hover {
 label {
   font-family: "Open Sans", sans-serif;
   font-weight: 600;
+  color: rgba(0, 0, 0, 0.5);
 }
 
 textarea {
@@ -106,7 +107,7 @@ textarea {
   display: inline-block;
   height: 7px;
   border-radius: 1rem;
-  background-color: #EEECF4;
+  background-color: rgba(244, 67, 54, 0.4);
 }
 
 .section-title-separator .large {
@@ -139,18 +140,47 @@ textarea {
   width: 100px;
 }
 
-.nav-link {
-  font-weight: 700;
-  font-size: 13px;
+.sticky-custom {
+  transition: .5s all ease-in-out;
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+}
+
+.sticky-custom .nav-link {
+  color: #fff;
   font-family: "Open Sans", sans-serif;
+  font-size: 13px;
+  font-weight: 700;
   text-transform: uppercase;
+  transition: .5s all ease-in-out;
+}
+
+.sticky-custom .nav-link.active {
+  color: #fff;
+}
+
+.stickyhead {
+  background: white;
+  width: 100%;
+  z-index: 9;
+  transition: .5s all ease-in-out;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.stickyhead .nav-link {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.stickyhead .nav-link.active {
+  color: rgba(0, 0, 0, 0.9);
 }
 
 .home-bg {
   background-image: url("https://images.unsplash.com/photo-1527515862127-a4fc05baf7a5?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=94bc060b3ea71111a8caeb6e1ace30f0&auto=format&fit=crop&w=1050&q=80");
   background-size: cover;
   background-position: center;
-  height: 90vh;
+  height: 100vh;
   position: relative;
   width: 100%;
 }
@@ -349,22 +379,6 @@ textarea {
   transition-property: opacity, all;
 }
 
-.sticky-custom {
-  top: -115px;
-  transition: 1s all ease;
-  position: inherit;
-}
-
-.stickyhead {
-  position: fixed;
-  background: white;
-  top: 0;
-  width: 100%;
-  z-index: 9;
-  transition: 1s all ease;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-}
-
 footer {
   font-family: "Open Sans", sans-serif;
   color: rgba(0, 0, 0, 0.5);
@@ -386,8 +400,9 @@ footer li {
 }
 
 footer li:first-child {
-  font-weight: 700;
   color: #f44336;
+  font-weight: 700;
+  margin-bottom: 20px;
   text-transform: uppercase;
 }
 
@@ -404,6 +419,12 @@ footer a {
 
 .footer-logo img {
   width: 200px;
+}
+
+.footer-contact i.fa {
+  color: rgba(244, 67, 54, 0.8);
+  font-size: 13px;
+  margin-right: 5px;
 }
 
 .banner {
