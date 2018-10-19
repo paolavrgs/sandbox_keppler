@@ -140,6 +140,22 @@ textarea {
   }
 }
 
+.nav-link {
+  font-family: $opensans;
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  transition: .5s all ease-in-out;
+}
+
+.nav-variant {
+  box-shadow:0 0 10px rgba(0,0,0,0.3);
+
+  .nav-link {
+    color: rgba($black, 0.5);
+  }
+}
+
 .sticky-custom {
   transition: .5s all ease-in-out;
   position: fixed;
@@ -148,11 +164,6 @@ textarea {
 
   .nav-link {
     color: $white;
-    font-family: $opensans;
-    font-size: 13px;
-    font-weight: 700;
-    text-transform: uppercase;
-    transition: .5s all ease-in-out;
   
     &.active {
       color: $white;
@@ -649,13 +660,23 @@ footer {
   }
 }
 
-footer::before {
+.footer-index::before {
   background-image: url('../img/wave_2.png');
   background-size: cover;
   @include pseudo();
   height: 100px;
   top: -99px;
   width: 100%;
+}
+
+.footer-variant::before {
+  background-image: url('../img/wave_double_redwhite.svg');
+  background-size: cover;
+  @include pseudo();
+  height: 400px;
+  top: -300px;
+  width: 100%;
+  z-index: -1;
 }
 
 .contact {

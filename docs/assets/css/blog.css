@@ -1,0 +1,147 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700,800");
+
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800");
+
+.single-post {
+  padding: 70px 0;
+}
+
+.single-post a {
+  color: rgba(0, 0, 0, 0.8);
+}
+
+.single-post-details {
+  display: flex;
+  padding: 15px 0;
+  border-radius: 15px;
+  color: rgba(0, 0, 0, 0.8);
+  font-size: 14px;
+  margin-bottom: 30px;
+  justify-content: space-between;
+}
+
+.single-post-details ul {
+  padding-left: 0;
+  display: inline-flex;
+}
+
+.single-post-details li {
+  list-style: none;
+  margin: 0 8px;
+}
+
+.single-post-details li:first-child {
+  font-family: "Open Sans", sans-serif;
+}
+
+.single-post-box img {
+  height: 300px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.single-post-title {
+  font-family: "Montserrat", sans-serif;
+  font-size: 30px;
+  margin-bottom: 30px;
+  color: rgba(0, 0, 0, 0.8);
+  position: relative;
+  font-weight: 700;
+  display: inline-block;
+}
+
+.single-post-article {
+  font-family: "Open Sans", sans-serif;
+  font-size: 15px;
+  line-height: 26px;
+  margin-top: 50px;
+}
+
+.author-date {
+  display: flex;
+  flex-direction: column;
+  font-family: "Open Sans", sans-serif;
+}
+
+.search-bar {
+  border: 1px solid #f0f0f0;
+  border-radius: 10px;
+}
+
+.search-bar input {
+  font-size: 14px;
+  margin-left: 4px;
+  border: 0;
+  font-family: "Open Sans", sans-serif;
+}
+
+.search-bar .input-group-btn {
+  padding: 2px 5px;
+  margin-top: 2px;
+  position: relative;
+  margin-bottom: 0;
+  border-radius: 3px;
+  z-index: 3;
+}
+
+.search-bar button {
+  border: 0;
+  color: #f44336;
+  background: none;
+}
+
+.aside-blog {
+  box-shadow: 0px 5px 20px -5px rgba(0, 0, 0, 0.2);
+  padding: 15px;
+}
+
+.blog-aside-title {
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.categories-tags {
+  margin: 40px 0;
+}
+
+.categories-tags .badge-keppler {
+  background-color: #f44336;
+  color: #fff;
+}
+
+.related-posts {
+  margin: 40px 0;
+}
+
+.related-posts .card {
+  padding: 20px 10px;
+  position: relative;
+  margin-top: 20px;
+  border: 1px solid #f0f0f0;
+  border-radius: 15px;
+}
+
+.related-posts img {
+  height: 70px;
+  width: 70px;
+  object-fit: cover;
+}
+
+.related-posts .card-related-content {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  margin-left: 80px;
+}
+
+.related-posts h4 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.related-posts span {
+  font-family: "Open Sans", sans-serif;
+  font-size: 13px;
+}

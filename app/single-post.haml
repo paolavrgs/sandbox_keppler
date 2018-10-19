@@ -1,0 +1,100 @@
+:ruby
+  def render(partial)
+    Haml::Engine.new(File.read(partial)).render
+  end
+%html{ lang: 'en' }
+  %head
+    = render('app/partials/_head.haml')
+  %body
+    = render('app/partials/_navbar.haml')
+    %section.single-post
+      .container
+        .row
+          .col-lg-8
+            .single-post-box
+              %h1.single-post-title Benefits of swimming for good metabolism
+              .single-post-details
+                .author-date
+                  %span
+                    By
+                    %a{ href: '#' } John Doe
+                  %span
+                    - t = Time.now
+                    = t.strftime("%d %b %Y")
+                %ul
+                  %li Compartir en
+                  %li
+                    %a{ href: '#' }
+                      %i.fab.fa-facebook-f
+                  %li
+                    %a{ href: '#' }
+                      %i.fab.fa-twitter
+                  %li
+                    %a{ href: '#' }
+                      %i.fab.fa-instagram
+              %img{ src: 'https://wpthemebooster.com/demo/themeforest/wordpress/yowel/wp-content/uploads/2018/06/slide-6.png' }
+              %article.single-post-article
+                Sed ut perspiciatis unde omnis iste error sit voluptatem accusadoloreLorem Ipsum is simply type setting Ipsum is simply dummy Sed ut perspiomnis iste error sit voluccusa dolordummy text of the printing and typesetting Loremsimply dummy text Sed ut perspiciatis ude voluptateLorem Ipsum is simply type formIpsum is simply dummy Sed ut persiomns iste error sit voluem accusa dolorduyiyext of the printing und voluptat accusa dolore. Sed ut perspiciatis unde omnis iste error sit voluptatem accusadolore.
+          .col-lg-4
+            .aside-blog
+              .search-bar
+                .input-group
+                  %input.form-control{placeholder: "Search", type: "text"}
+                  %span.input-group-btn
+                    %button.btn
+                      %span.fa.fa-search
+              .categories-tags
+                %h1.blog-aside-title Tags
+                %span.badge.badge-keppler Fitness
+                %span.badge.badge-keppler Sport
+              .related-posts
+                %h1.blog-aside-title Ultimas publicaciones
+                - 4.times do
+                  .card
+                    .card-related-content
+                      %h4 How to make a chocolate cake
+                      %span
+                        By
+                        %a{ href: '#' } John Doe
+                      %span= t.strftime("%d %b %Y")
+                    %img{ src: 'https://images.unsplash.com/photo-1490126125528-a0c3b2998dcd?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=a7d2f4ad62efd5c276043602a6c8a74d&auto=format&fit=crop&w=634&q=80' }
+    %footer.footer-variant
+      .container
+        .row
+          .d-flex.justify-content-center.w-100
+            .footer-logo
+              %img{ src: 'assets/img/keppler_logo.png' }
+          .col-lg-4
+            %li About
+            %p Lorem ipsum dolor sit, amet consectetur adipisicing elit. Non, reiciendis blanditiis nam veniam beatae vitae ad quis maxime praesentium, quam ducimus, eius dolores. Laudantium, provident vitae? Commodi, dicta quos. Ratione.
+          .col-lg-4
+            %ul.footer-contact
+              %li Contacto
+              %li 
+                %i.fa.fa-envelope
+                yourcompany@gmail.com
+              %li
+                %i.fa.fa-phone
+                (+1) 450450450
+              %li
+                %i.fa.fa-map-marker
+                2662 Fidler Drive, San Antonio, TX
+          .col-lg-4
+            %ul.footer-sitemap
+              %li Sitemap
+              %li
+                %a{ href: '' } Nosotros
+              %li
+                %a{ href: '' } Servicios
+              %li
+                %a{ href: '' } Productos
+              %li
+                %a{ href: '' } Galería
+              %li
+                %a{ href: '' } Blog
+  %script{ src: 'https://code.jquery.com/jquery-3.3.1.min.js' }
+  %script{ src: 'https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js' }
+  %script{ src: 'https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js' }
+  %script{ src: 'https://cdn.jsdelivr.net/npm/typed.js@2.0.9' }
+  %script{ src: 'https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js' }
+  %script{ src: 'assets/js/main.js' }

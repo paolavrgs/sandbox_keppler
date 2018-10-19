@@ -140,6 +140,22 @@ textarea {
   width: 100px;
 }
 
+.nav-link {
+  font-family: "Open Sans", sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  transition: .5s all ease-in-out;
+}
+
+.nav-variant {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.nav-variant .nav-link {
+  color: rgba(0, 0, 0, 0.5);
+}
+
 .sticky-custom {
   transition: .5s all ease-in-out;
   position: fixed;
@@ -149,11 +165,6 @@ textarea {
 
 .sticky-custom .nav-link {
   color: #fff;
-  font-family: "Open Sans", sans-serif;
-  font-size: 13px;
-  font-weight: 700;
-  text-transform: uppercase;
-  transition: .5s all ease-in-out;
 }
 
 .sticky-custom .nav-link.active {
@@ -669,7 +680,7 @@ footer a {
   transition: width .5s;
 }
 
-footer::before {
+.footer-index::before {
   background-image: url("../img/wave_2.png");
   background-size: cover;
   content: "";
@@ -677,6 +688,17 @@ footer::before {
   height: 100px;
   top: -99px;
   width: 100%;
+}
+
+.footer-variant::before {
+  background-image: url("../img/wave_double_redwhite.svg");
+  background-size: cover;
+  content: "";
+  position: absolute;
+  height: 400px;
+  top: -300px;
+  width: 100%;
+  z-index: -1;
 }
 
 .contact {

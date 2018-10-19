@@ -205,40 +205,7 @@
                         %label Mensaje
                         %textarea.form-control{ type: "email" }
                   %button.btn.main-btn.btn-orange.float-right Enviar
-    %footer
-      .container
-        .row
-          .d-flex.justify-content-center.w-100
-            .footer-logo
-              %img{ src: 'assets/img/keppler_logo.png' }
-          .col-lg-4
-            %li About
-            %p Lorem ipsum dolor sit, amet consectetur adipisicing elit. Non, reiciendis blanditiis nam veniam beatae vitae ad quis maxime praesentium, quam ducimus, eius dolores. Laudantium, provident vitae? Commodi, dicta quos. Ratione.
-          .col-lg-4
-            %ul.footer-contact
-              %li Contacto
-              %li 
-                %i.fa.fa-envelope
-                yourcompany@gmail.com
-              %li
-                %i.fa.fa-phone
-                (+1) 450450450
-              %li
-                %i.fa.fa-map-marker
-                2662 Fidler Drive, San Antonio, TX
-          .col-lg-4
-            %ul.footer-sitemap
-              %li Sitemap
-              %li
-                %a{ href: '' } Nosotros
-              %li
-                %a{ href: '' } Servicios
-              %li
-                %a{ href: '' } Productos
-              %li
-                %a{ href: '' } Galería
-              %li
-                %a{ href: '' } Blog
+    = render('app/partials/_footer.haml')
     / Modal
     .modal.fade{ id: 'modalGallery', 'aria-hidden' => 'true', role: 'dialog', tabindex: '-1' }
       .modal-dialog{ role: 'document' }

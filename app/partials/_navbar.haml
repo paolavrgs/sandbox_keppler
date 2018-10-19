@@ -1,0 +1,31 @@
+// Navigation - Views
+%nav.navbar.navbar-expand-lg.nav-variant
+  %a.navbar-brand.d-md-none{ href: '#' }
+    %img{ src: 'assets/img/keppler_logo.png', alt: 'Keppler' }
+  %button.navbar-toggler{ 'aria-controls' => 'sandbox-nav', 'aria-expanded' => 'false', 'aria-label' => 'Toggle navigation', 'data-target' => '#sandbox-nav', 'data-toggle' => 'collapse', type: 'button' }
+    %span.navbar-toggler-icon
+  .collapse.navbar-collapse{ id: 'sandbox-nav' }
+    %ul.navbar-nav.mr-auto
+      %a.navbar-brand{ href: '#' }
+        %img{ src: 'assets/img/keppler_logo.png', alt: 'Keppler' }
+    %ul.navbar-nav.mx-auto
+      %li
+        %a.nav-item.nav-link{ href: '#home' } Inicio
+      %li
+        %a.nav-item.nav-link{ href: '#services' } Servicios
+      %li
+        %a.nav-item.nav-link{ href: '#products' } Productos
+      %li
+        %a.nav-item.nav-link{ href: '#gallery' } Galería
+      %li
+        %a.nav-item.nav-link{ href: '#blog' } Blog
+    %ul.navbar-nav.ml-auto
+      %li
+        %a.nav-item.nav-link{ href: '#' }
+          %i.fab.fa-facebook-f
+      %li
+        %a.nav-item.nav-link{ href: '#' }
+          %i.fab.fa-twitter
+      %li
+        %a.nav-item.nav-link{ href: '#' }
+          %i.fab.fa-instagram

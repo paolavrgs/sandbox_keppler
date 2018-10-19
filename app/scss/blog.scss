@@ -1,0 +1,146 @@
+@import "variables";
+@import "mixins";
+@import "bourbon";
+
+.single-post {
+  padding: 70px 0;
+  a {
+    color: rgba($black, .8);
+  }
+}
+
+.single-post-details {
+  display: flex;
+  padding: 15px 0;
+  border-radius: 15px;
+  color: rgba($black, .8);
+  font-size: 14px;
+  margin-bottom: 30px;
+  justify-content: space-between;
+
+  ul {
+    padding-left: 0;
+    display: inline-flex;
+  }
+
+  li {
+    list-style: none;
+    margin: 0 8px;
+
+    &:first-child {
+      font-family: $opensans;
+    }
+  }
+}
+
+.single-post-box {
+  img {
+    @include size(100%, 300px);
+    object-fit: cover;
+  }
+}
+
+.single-post-title {
+  font-family: $montserrat;
+  font-size: 30px;
+  margin-bottom: 30px;
+  color: rgba($black, .8);
+  position: relative;
+  font-weight: 700;
+  display: inline-block;
+}
+
+.single-post-article {
+  font-family: $opensans;
+  font-size: 15px;
+  line-height: 26px;
+  margin-top: 50px;
+}
+
+.author-date {
+  display: flex;
+  flex-direction: column;
+  font-family: $opensans;
+}
+
+.search-bar {
+  border: 1px solid #f0f0f0;
+  border-radius: 10px;
+
+  input {
+    font-size: 14px;
+    margin-left: 4px;
+    border: 0;
+    font-family: $opensans;
+  }
+
+  .input-group-btn {
+    padding: 2px 5px;
+    margin-top: 2px;
+    position: relative;
+    margin-bottom: 0;
+    border-radius: 3px;
+    z-index: 3;
+  }
+  
+  button {
+    border: 0;
+    color: $keppler;
+    background: none;
+  }
+}
+
+.aside-blog {
+  box-shadow: 0px 5px 20px -5px rgba(0, 0, 0, 0.2);
+  padding: 15px;
+}
+
+.blog-aside-title {
+  font-family: $montserrat;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.categories-tags {
+  margin: 40px 0;
+
+  .badge-keppler {
+    background-color: $keppler;
+    color: $white;
+  }
+}
+
+.related-posts {
+  margin: 40px 0;
+  
+  .card {
+    padding: 20px 10px;
+    position: relative;
+    margin-top: 20px;
+    border: 1px solid #f0f0f0;
+    border-radius: 15px;
+  }
+
+  img {
+    @include size(70px);
+    object-fit: cover;
+  }
+
+  .card-related-content {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    margin-left: 80px;
+  }
+
+  h4 {
+    font-family: $montserrat;
+    font-size: 14px;
+    font-weight: 600;
+  }
+
+  span {
+    font-family: $opensans;
+    font-size: 13px;
+  }
+}
