@@ -1,0 +1,54 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700,800");
+
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800");
+
+.product-detail {
+  padding: 70px 0;
+}
+
+.product-center-slick {
+  height: 350px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  margin: 0 10px;
+  transition: all ease-in-out .3s;
+  border-radius: 15px;
+}
+
+.center .slick-list {
+  padding: 60px !important;
+}
+
+.center .slick-center {
+  box-shadow: 0px 9px 32px -1px rgba(0, 0, 0, 0.2);
+  transform: translateY(-10px);
+  transition: all ease-in-out .3s;
+}
+
+.product-detail-box {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 100px;
+  padding: 60px 0;
+}
+
+.product-description {
+  width: 70%;
+}
+
+.product-description h1 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 25px;
+  font-weight: 500;
+}
+
+.product-description p {
+  font-family: "Open Sans", sans-serif;
+  font-size: 15px;
+}
+
+.product-button {
+  display: flex;
+  align-items: center;
+}

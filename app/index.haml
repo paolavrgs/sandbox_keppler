@@ -41,11 +41,11 @@
         %span.navbar-toggler-icon
       .collapse.navbar-collapse{ id: 'sandbox-nav' }
         %ul.navbar-nav.mr-auto
-          %a.navbar-brand{ href: '#' }
+          %a.navbar-brand{ href: '/' }
             %img{ src: 'assets/img/keppler_logo.png', alt: 'Keppler' }
         %ul.navbar-nav.mx-auto
           %li
-            %a.nav-item.nav-link{ href: '#home' } Inicio
+            %a.nav-item.nav-link{ href: '/' } Inicio
           %li
             %a.nav-item.nav-link{ href: '#services' } Servicios
           %li
@@ -109,7 +109,7 @@
                   %h1 Producto numero #{x}
                   %p Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis, illum quod tempore quam facilis pariatur sapiente adipisci odit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis, illum quod tempore quam facilis pariatur sapiente adipisci odit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis, illum quod tempore quam facilis pariatur sapiente adipisci odit.
                   .btn-products
-                    %a.btn-flat{ href: '#' } Ver más
+                    %a.btn-flat{ href: 'product.html' } Ver más
                     %button.btn.main-btn.btn-orange Probar ahora
 
     %section.gallery{ id: 'gallery' }
@@ -159,13 +159,13 @@
         .row.multiple-items
           - 6.times do
             .col-lg-4.col-xs-12
-              %a{ href: '' }
+              %a{ href: 'single-post.html' }
                 .post-wrapper
                   .post-content
                     .post-img
                       %img{ src: 'https://images.unsplash.com/photo-1528279027-68f0d7fce9f1?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=3b968702b74dc339188bfbf29ae6c634&auto=format&fit=crop&w=1050&q=80', alt: '' }
                     .post-text
-                      %h4.post-title Titulo del Blog
+                      %h4.post-title The best subways in the entire world
                       %p It does get a bit more tricky though. Both EMs and pixels have their downfalls with media queries.
                   .post-date
                     %span.day 25
