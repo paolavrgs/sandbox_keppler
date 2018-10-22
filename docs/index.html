@@ -22,11 +22,34 @@
     <a class="navbar-brand d-md-none" href="#">
       <img alt="Keppler" src="assets/img/keppler_logo.png">
     </a>
-    <button aria-controls="sandbox-nav" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-target="#sandbox-nav" data-toggle="collapse" type="button">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+    <div class="dropdown dropdown-navbar d-md-none">
+      <a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle" data-toggle="dropdown" id="menu">
+        <div class="icon toggle_menu">
+          <div class="hamburger"></div>
+        </div>
+      </a>
+      <div aria-labelledby="menu" class="dropdown-menu">
+        <ul class="navbar-nav mx-auto">
+          <li>
+            <a class="nav-item nav-link" href="/">Inicio</a>
+          </li>
+          <li>
+            <a class="nav-item nav-link" href="#services">Servicios</a>
+          </li>
+          <li>
+            <a class="nav-item nav-link" href="#products">Productos</a>
+          </li>
+          <li>
+            <a class="nav-item nav-link" href="#gallery">Galería</a>
+          </li>
+          <li>
+            <a class="nav-item nav-link" href="#blog">Blog</a>
+          </li>
+        </ul>
+      </div>
+    </div>
     <div class="collapse navbar-collapse" id="sandbox-nav">
-      <ul class="navbar-nav mr-auto">
+      <ul class="navbar-nav mr-auto d-none d-md-block">
         <a class="navbar-brand" href="/">
           <img alt="Keppler" src="assets/img/keppler_logo.png">
         </a>
@@ -447,11 +470,11 @@
             <img src='assets/img/keppler_logo.png'>
           </div>
         </div>
-        <div class='col-lg-4'>
+        <div class='col-lg-4 col-sm-6'>
           <li>About</li>
           <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Non, reiciendis blanditiis nam veniam beatae vitae ad quis maxime praesentium, quam ducimus, eius dolores. Laudantium, provident vitae? Commodi, dicta quos. Ratione.</p>
         </div>
-        <div class='col-lg-4'>
+        <div class='col-lg-4 col-sm-6'>
           <ul class='footer-contact'>
             <li>Contacto</li>
             <li>
@@ -468,7 +491,7 @@
             </li>
           </ul>
         </div>
-        <div class='col-lg-4'>
+        <div class='col-lg-4 d-none d-lg-block'>
           <ul class='footer-sitemap'>
             <li>Sitemap</li>
             <li>

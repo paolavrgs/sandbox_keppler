@@ -18,7 +18,8 @@ $('.multiple-items').slick({
       breakpoint: 480,
       settings: {
         slidesToShow: 1,
-        slidesToScroll: 1
+        slidesToScroll: 1,
+        arrows: false
       }
     }
   ]
@@ -97,3 +98,13 @@ $(document).on('scroll', function () {
 $('#modalGallery').on('shown.bs.modal', function () {
   $('.single-item').slick();
 })
+
+$(document).ready(function(){
+	$('.icon, .navigation_item').click(function(){
+		$('.icon').toggleClass('active');
+		$('#menu').toggleClass('hide');
+  });
+	$(".toggle_menu, .navigation_item").click(function(){
+		$(".sidebar_menu").toggleClass("hide_menu");
+	});
+});

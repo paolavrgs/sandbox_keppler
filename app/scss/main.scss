@@ -124,38 +124,6 @@ textarea {
   }
 }
 
-.navbar {
-  padding: 8px 50px;
-
-  @include responsive(xs) {
-    padding: 8px 16px;
-  }
-}
-
-.navbar-brand {
-  margin-right: 0;
-
-  img {
-    width: 100px;
-  }
-}
-
-.nav-link {
-  font-family: $opensans;
-  font-size: 13px;
-  font-weight: 700;
-  text-transform: uppercase;
-  transition: .5s all ease-in-out;
-}
-
-.nav-variant {
-  box-shadow:0 0 10px rgba(0,0,0,0.3);
-
-  .nav-link {
-    color: rgba($black, 0.5);
-  }
-}
-
 .sticky-custom {
   transition: .5s all ease-in-out;
   position: fixed;
@@ -184,6 +152,62 @@ textarea {
     &.active {
       color: rgba($black, .9);
     }
+  }
+}
+
+.navbar {
+  padding: 8px 50px;
+
+  @include responsive(xs) {
+    padding: 8px 16px;
+    position: relative;
+
+    .nav-link {
+      color: rgba($black, .5);
+    }
+  }
+}
+
+.navbar-brand {
+  margin-right: 0;
+
+  img {
+    width: 100px;
+  }
+}
+
+.nav-link {
+  font-family: $opensans;
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  transition: .5s all ease-in-out;
+}
+
+.nav-variant {
+  box-shadow:0 0 10px rgba(0,0,0,0.3);
+
+  .nav-link {
+    color: rgba($black, 0.5);
+  }
+}
+
+.dropdown-navbar {
+
+  .dropdown-toggle {
+    cursor: pointer;
+
+    &::after {
+      border: 0;
+    }
+  }
+
+  .dropdown-menu {
+    border: 0;
+    box-shadow: 0px 9px 32px -1px rgba(0,0,0,0.2);
+    left: unset;
+    right: 0;
+    padding: 15px;
   }
 }
 
@@ -495,7 +519,7 @@ footer {
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
-  @include size(100%, 500px);
+  @include size(100%, 60vh);
 }
 
 .modal-dialog {
@@ -716,4 +740,50 @@ footer {
   @include responsive(xs) {
     padding-left: 0;
   }
+}
+
+.icon.toggle_menu {
+  left: -20px;
+  top: 8px;
+  position: absolute;
+}
+
+.hamburger {
+  @include size(25px, 4px);
+  border-radius: 15px;
+  position: absolute;
+  background: $keppler;
+  transition: .3s;
+
+  &::after, &::before {
+    @include pseudo();
+    @include size(25px, 4px);
+    border-radius: 15px;
+    background: $keppler;
+    transition: .5s;
+  }
+
+  &::after {
+    top: 8px;
+  }
+
+  &::before {
+    top: -8px;
+  }
+}
+
+.icon.active .hamburger{
+  background: transparent;
+}
+
+.icon.active .hamburger:before{
+  transform: rotate(45deg);
+  top:0;
+  transition: .5s;
+}
+
+.icon.active .hamburger:after{
+  transform: rotate(135deg);
+  top:0;
+  transition: .5s;
 }

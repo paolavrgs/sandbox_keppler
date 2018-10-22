@@ -37,10 +37,24 @@
     %nav.navbar.navbar-expand-lg.sticky-custom
       %a.navbar-brand.d-md-none{ href: '#' }
         %img{ src: 'assets/img/keppler_logo.png', alt: 'Keppler' }
-      %button.navbar-toggler{ 'aria-controls' => 'sandbox-nav', 'aria-expanded' => 'false', 'aria-label' => 'Toggle navigation', 'data-target' => '#sandbox-nav', 'data-toggle' => 'collapse', type: 'button' }
-        %span.navbar-toggler-icon
+      .dropdown.dropdown-navbar.d-md-none
+        %a#menu.dropdown-toggle{"aria-expanded" => "false", "aria-haspopup" => "true", "data-toggle" => "dropdown"}
+          .icon.toggle_menu
+            .hamburger
+        .dropdown-menu{"aria-labelledby" => "menu"}
+          %ul.navbar-nav.mx-auto
+            %li
+              %a.nav-item.nav-link{ href: '/' } Inicio
+            %li
+              %a.nav-item.nav-link{ href: '#services' } Servicios
+            %li
+              %a.nav-item.nav-link{ href: '#products' } Productos
+            %li
+              %a.nav-item.nav-link{ href: '#gallery' } Galería
+            %li
+              %a.nav-item.nav-link{ href: '#blog' } Blog
       .collapse.navbar-collapse{ id: 'sandbox-nav' }
-        %ul.navbar-nav.mr-auto
+        %ul.navbar-nav.mr-auto.d-none.d-md-block
           %a.navbar-brand{ href: '/' }
             %img{ src: 'assets/img/keppler_logo.png', alt: 'Keppler' }
         %ul.navbar-nav.mx-auto
